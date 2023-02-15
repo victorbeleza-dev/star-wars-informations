@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URISyntaxException;
+import java.text.ParseException;
 import java.util.List;
 
 @RestController
@@ -21,12 +22,12 @@ public class InformationController {
     private InformationService informationService;
 
     @GetMapping("/films")
-    public List<FilmDTO> find() throws URISyntaxException {
+    public List<FilmDTO> find() throws ParseException {
         return informationService.findFilms();
     }
 
     @GetMapping("/film")
-    public List<FilmDTO> findByIdAndTitle(@RequestParam String titleEp, @RequestParam String idEp){
+    public List<FilmDTO> findByIdAndTitle(@RequestParam String titleEp, @RequestParam String idEp) throws ParseException {
         return informationService.findFilmByIdAndTitle(titleEp, idEp);
     }
 }
