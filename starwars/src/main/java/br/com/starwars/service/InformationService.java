@@ -10,4 +10,6 @@ import java.util.List;
 public interface InformationService {
 
     List<FilmDTO> findFilms();
+
+    List<FilmDTO> findFilmByIdAndTitle(String title, String episodioID);
 }
