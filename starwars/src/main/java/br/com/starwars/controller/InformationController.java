@@ -21,13 +21,13 @@ public class InformationController {
     @Autowired
     private InformationService informationService;
 
-    @GetMapping("/films")
-    public List<FilmDTO> find() throws ParseException {
+    @GetMapping("/movies")
+    public List<FilmDTO> findAllMovies() throws ParseException {
         return informationService.findFilms();
     }
 
-    @GetMapping("/film")
-    public List<FilmDTO> findByIdAndTitle(@RequestParam String titleEp, @RequestParam String idEp) throws ParseException {
+    @GetMapping("/movie")
+    public List<FilmDTO> findMovieByIdAndTitle(@RequestParam String titleEp, @RequestParam String idEp) throws ParseException {
         return informationService.findFilmByIdAndTitle(titleEp, idEp);
     }
 }

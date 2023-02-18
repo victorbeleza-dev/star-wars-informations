@@ -1,9 +1,9 @@
 package br.com.starwarsh2.controller;
 
-import br.com.starwarsh2.client.ApiStarwarsClient;
-import br.com.starwarsh2.model.Film;
+import br.com.starwarsh2.model.dto.MovieDTO;
+import br.com.starwarsh2.service.DirectorsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,17 +11,12 @@ import org.springframework.web.bind.annotation.*;
 public class FilmsController {
 
     @Autowired
-    private ApiStarwarsClient client;
+    private DirectorsService directorsService;
 
-    @GetMapping("/update")
-    public String find() throws Exception{
-        return  client.sendGetRequest();
-    }
-
-    @PostMapping("/film")
-    public String creteFilm(@RequestBody Film newFilm){
-        System.out.println(newFilm);
-              return newFilm.getTitle();
+    @PostMapping("/movie")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void insertMovie(@RequestBody MovieDTO movie){
+        directorsService.insertMovie(movie);
     }
 
 }
