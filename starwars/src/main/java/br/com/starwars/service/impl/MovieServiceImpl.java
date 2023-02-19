@@ -19,11 +19,11 @@ public class MovieServiceImpl implements MovieService {
     @Autowired
     private ApiStarwarsClient apiStarwarsClient;
 
-    private static final String numberSkyWalker = "1";
+    private static final String IDLUKESKYWALKER = "1";
     private final MovieMapper movieMapper = new MovieMapper();
 
     public List<MovieDTO> findAllMovies() {
-        PeopleInfo peopleInfo = apiStarwarsClient.findPeople(numberSkyWalker);
+        PeopleInfo peopleInfo = apiStarwarsClient.findPeople(IDLUKESKYWALKER);
 
         List<MovieDTO> movieDTOList = new ArrayList<>();
 
