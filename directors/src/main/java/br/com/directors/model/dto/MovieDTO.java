@@ -1,13 +1,12 @@
-package br.com.starwars.model.dto;
+package br.com.directors.model.dto;
 
-import lombok.*;
-
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class MovieDTO {
 
     private String title;
