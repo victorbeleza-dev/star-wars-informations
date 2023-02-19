@@ -33,7 +33,7 @@ public class DirectorsServiceImpl implements DirectorsService {
             List<MovieDTO> listMovies = apiMoviesClient.findAllFilms();
             listMovies.add(movieDTO);
 
-            log.info("Lista de filmes atualizada:");
+            log.info("!Lista de filmes atualizada:");
             listMovies.forEach(movie ->{
                 log.info("title: " + movie.getTitle());
                 movieRepository.save(movieMapper.mapToEntity(movie));

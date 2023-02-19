@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/director")
-public class FilmsController {
+public class DirectorsController {
 
     @Autowired
     private DirectorsService directorsService;
