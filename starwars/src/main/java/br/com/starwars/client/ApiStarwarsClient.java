@@ -14,9 +14,9 @@ public interface ApiStarwarsClient {
     PeopleInfo findPeople(@PathVariable String id);
 
     @GetMapping("/films/{id}")
-    Movie findFilm(@PathVariable String id);
+    Movie findMovie(@PathVariable String id);
 
     @GetMapping("/films")
-    ListAllMovies findAllFilms();
+    ListAllMovies findAllMovies();
 
 }

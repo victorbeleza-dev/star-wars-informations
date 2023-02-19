@@ -28,7 +28,7 @@ public class MovieServiceImpl implements MovieService {
         List<MovieDTO> movieDTOList = new ArrayList<>();
 
         peopleInfo.getFilms().forEach(url -> {
-            Movie movie = apiStarwarsClient.findFilm(url.substring(url.length() - 2, url.length() - 1));
+            Movie movie = apiStarwarsClient.findMovie(url.substring(url.length() - 2, url.length() - 1));
             movieDTOList.add(movieMapper.maptoDTO(movie));
         });
 
@@ -36,7 +36,7 @@ public class MovieServiceImpl implements MovieService {
     }
 
     public List<MovieDTO> findMovieByIdAndTitle(String title, String episodioID) {
-        ListAllMovies response = apiStarwarsClient.findAllFilms();
+        ListAllMovies response = apiStarwarsClient.findAllMovies();
 
         List<Movie> listFilter = response.getResults().stream().filter(movie -> movie.getEpisode_id().equals(episodioID)).filter(mv -> mv.getTitle().equals(title)).toList();
         List<MovieDTO> listDTO = new ArrayList<>();
