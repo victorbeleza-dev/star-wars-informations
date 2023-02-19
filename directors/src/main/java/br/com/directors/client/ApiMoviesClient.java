@@ -10,5 +10,5 @@ import java.util.List;
 public interface ApiMoviesClient {
 
     @GetMapping("/informations/movies")
-    List<MovieDTO> findAllFilms();
+    List<MovieDTO> findAllMovies();
 }

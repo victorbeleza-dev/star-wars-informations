@@ -2,7 +2,9 @@ package br.com.directors.service;
 
 import br.com.directors.model.dto.MovieDTO;
 
+import java.util.List;
+
 public interface DirectorsService{
 
-    void insertMovie(MovieDTO filmDTO);
+    List<MovieDTO> insertMovie(MovieDTO filmDTO);
 }
