@@ -99,7 +99,7 @@
 }
 ```
 * Após o request ele irá buscar a lista de filmes ja existentes na primeira parte e irá inserir o filme novo na lista, aparecendo no console todos os filmes dessa lista como no exemplo abaixo (Pode demorar um pouco pois a api consumida é de terceiros):
-![image](https://user-images.githubusercontent.com/51977789/219922750-db6338d1-a6a5-48d1-8d2a-c6b13fe7bcd3.png)
+**![image](https://user-images.githubusercontent.com/51977789/219922750-db6338d1-a6a5-48d1-8d2a-c6b13fe7bcd3.png)**
 * Após isso irá ser inserida no Banco de dados H2 na rota **localhost:8081/h2-console** pode se logar com os dados abaixo:
 ```
 JDBC URL: jdbc:h2:mem:dcbapp
